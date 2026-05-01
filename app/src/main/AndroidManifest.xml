@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KleenPride">
+
+        <!-- ⭐ KEEP YOUR MAPS API KEY -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCPJVMwxvwU5HIUW1Layws7G_mtM-wyF0s" />
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.homescreen.MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.booking.BookingActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.booking.createbooking.CreateBookingActivity"
+            android:exported="true" />
+
+
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="true" />
+
+        <activity android:name=".ui.profile.accinfo.AccountDetailsActivity" />
+        <activity android:name=".ui.profile.garage.MyGarageActivity" />
+        <activity android:name=".ui.profile.location.MyLocationsActivity" />
+
+        <activity
+            android:name=".ui.alerts.AlertsActivity"
+            android:exported="true" />
+
+        <!-- Admin screens -->
+        <activity
+            android:name=".admin.ui.profile.ProfileScreenActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".admin.ui.users.ManageUsersActivity"
+            android:exported="true" />
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name=".ui.auth.setup.AccountSetupActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Router -->
+        <activity
+            android:name=".RouterActivity"
+            android:exported="false" />
+
+        <!-- Detailer main -->
+        <activity
+            android:name=".detailers.ui.homescreen.DetailerMainActivity"
+            android:exported="false" />
+
+        <!-- Admin Overview -->
+        <activity
+            android:name=".admin.ui.overview.AdminOverviewActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
